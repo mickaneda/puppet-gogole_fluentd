@@ -2,15 +2,15 @@ class google_fluentd::install(
   $conf_files = []){
 
   exec {'get_script':
-    command => 'curl -sSO https://dl.google.com/cloudagents/install-logging-agent.sh',
-    cwd => '/root/'.
+    command => '/bin/curl -sSO https://dl.google.com/cloudagents/install-logging-agent.sh',
+    cwd => '/root/',
   }
   exec {'install_google_fluentd':
-    command => 'bash install-logging-agent.sh',
-    cwd => '/root/'.
+    command => '/bin/bash install-logging-agent.sh',
+    cwd => '/root/',
   }
 
-  $files.each |String $file| {
+  $conf_files.each |String $file| {
     $name = basename($file)
     $path = "/etc/google-fluentd/config.d/${name}"
     file {$name:
@@ -22,9 +22,9 @@ class google_fluentd::install(
     }
   }
 
-  if $files {
+  if $conf_files {
     exec {'restart_google_fluentd':
-      command => 'systemctl restart google-fluentd',
+      command => '/etc/init.d/google-fluentd restart',
     }
   }
 }
