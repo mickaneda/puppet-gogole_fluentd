@@ -1,2 +1,2 @@
-# puppet-gogole_fluentd
+# puppet-google_fluentd
 Puppet module for google-fluentd
