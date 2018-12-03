@@ -1,0 +1,19 @@
+{
+  "name": "puppet-google_fluentd",
+  "version": "0.0.1",
+  "author": "Michiru Kaneda",
+  "summary": "Puppet module for google-fluentd",
+  "license": "MIT",
+  "source": "https://github.com/mickaneda/puppet-google_fluentd",
+  "description": "Puppet module for google-fluentd",
+  "issues_url": "https://github.com/mickaneda/puppet-google_fluentd/issues",
+  "tags": [
+  ],
+  "project_page": "https://github.com/mickaneda/puppet-google_fluentd",
+  "requirements": [
+  ],
+  "operatingsystem_support": [
+  ],
+  "dependencies": [
+  ]
+}
