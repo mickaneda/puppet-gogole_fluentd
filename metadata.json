@@ -15,5 +15,6 @@
   "operatingsystem_support": [
   ],
   "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 2.0.0"}
   ]
 }
